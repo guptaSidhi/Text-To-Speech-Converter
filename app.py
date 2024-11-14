@@ -34,4 +34,4 @@ def predict():
         flash('Check your input', e)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=int(os.getenv("PORT", 5000)))
+    app.run(debug=True, port=int(os.getenv("PORT", 5000)),host="0.0.0.0")
