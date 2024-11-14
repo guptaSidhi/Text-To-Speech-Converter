@@ -27,7 +27,7 @@ def predict():
             data = request.json['data']
             accent_input = request.json['accent']
             accent = get_accent_tld(accent_input)
-            result = TTSApplication().text2Speech(data, accent)
+            result = TTSApplication().texttospeech(data, accent)
             return {"data": result.decode("utf-8")}
     except Exception as e:
         raise CustomException(e, sys)

@@ -1,9 +1,15 @@
 from datetime import datetime
+import os
 
-APPLICATION_NAME = 'src',
+def get_current_time():
+    fmt = "%Y-%m-%d %H%M%S"
+    return f"{datetime.now().strftime(fmt)}"
+
+ROOT_DIR = os.getcwd()
+CURRENT_TIME_STAMP = get_current_time()
+
+APPLICATION_NAME = 'src'
 ARTIFACT_DIR_KEY = 'artifact'
 AUDIO_DIR = 'tts_audio'
 TEXT_DIR = 'tts_text'
-
-TEXT_FILE_NAME = 'userinput.txt'
-CURRENT_TIME_STAMP = f"{datetime.now().strftime('%Y-%m-%d %H%M%S')}"
+TEXT_FILE_NAME = 'input_texts.txt'

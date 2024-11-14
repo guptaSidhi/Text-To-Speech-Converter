@@ -1,0 +1,4 @@
+venv/
+logs_path/
+README.md
+.gitignore
